@@ -1,0 +1,47 @@
+/* Resets */
+
+* {
+    box-sizing: border-box;
+  }
+
+body, h1, h2, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+h1, h2, p, strong {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+span {
+    display: inline-block;
+}
+
+img {
+    vertical-align: top;
+}
+
+body {
+    margin: 0 auto 150px auto;
+    background-color: #cebbff;
+}
+
+.txt-hide {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+}
