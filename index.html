@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="assets/images/favicon.png">
     <title>Vending Machine</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
@@ -28,7 +28,7 @@
                             </button>
                         </li>
                         <li class="list-beverage">
-                            <button class="btn-list-beverage">
+                            <button class="btn-list-beverage sold-out">
                                 <img src="assets/images/Violet_Cola.png" alt="보라색 커버 캔콜라" class="img-list-beverage">
                                 <span class="txt-name">Violet_Cola</span>
                                 <span class="txt-price">1000원</span>
@@ -69,45 +69,101 @@
                         <h3 class="txt-hide">잔액</h3>
                         <span class="txt-money balance">
                             잔액: <strong>1,000</strong> </span>
-                        <button type="button" class="btn-money-return">거스름돈 반환</button>
+                        <button type="button" class="btn-money">거스름돈 반환</button>
                     </article>
                     <article class="cont-deposit">
                         <h3 class="txt-hide">입금액 입력</h3>
                         <input type="text" class="txt-deposit" placeholder="입금액 입력">
-                        <button type="button" class="btn-money-return">입금</button>
+                        <button type="button" class="btn-money">입금</button>
                     </article>
                     <article class="cont-cart">
                         <h3 class="txt-hide">장바구니</h3>
                         <div class="box-item cart">
-                            <form>
+                            <form class="form-cart">
                                 <ul class="list-cart-item">
                                     <li class="list-item">
-                                        <img src="" alt="" class="img-list-beverage"> 이미지
+                                        <img src="assets/images/Original_Cola.png" alt="오리지널 빨간색 커버 캔콜라" class="img-list-beverage">
+                                        <span class="txt-name">Original_Cola</span>
+                                        <!-- 버튼같긴한데..일단 텍스트 처리 -->
+                                        <span class="txt-amount">1</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <img src="assets/images/Green_Cola.png" alt="초록색 커버 캔콜라" class="img-list-beverage">
+                                        <span class="txt-name">Green_Cola</span>
+                                        <span class="txt-amount">3</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <img src="assets/images/Violet_Cola.png" alt="보라색 커버 캔콜라" class="img-list-beverage">
+                                        <span class="txt-name">Violet_Cola</span>
+                                        <span class="txt-amount">2</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <img src="assets/images/Yellow_Cola.png" alt="노란색 커버 캔콜라" class="img-list-beverage">
+                                        <span class="txt-name">Yellow_Cola</span>
+                                        <span class="txt-amount">5</span>
                                     </li>
                                 </ul>
                             </form>
                         </div>
-                        <button type="button" class="btn-money-return">획득</button>
+                        <button type="button" class="btn-buy-items">획득</button>
                     </article>
                 </div>
             </section>
         <div class="cont-my-item">
-            <!-- <section class="cont-my-money">
-                <h2 class="txt-hide">소지금</h2> -->
-                <article class="cont-my-money">
-                    <h2 class="txt-hide">소지금</h2>
-                    <span class="txt-money my-money"> 소지금: <strong>25,000</strong> </span>
-                </article>
-            <!-- </section> -->
-            <!-- <section class="cont-get-item">   
-                <h2 class="txt-hide">구매한 음료리스트</h2> -->
-                <article class="cont-get-item">
-                    <h2 class="txt-hide">획득한 음료</h2>
-                    <strong>획득한 음료</strong>
-                    <div class="box-item get-item">안녕</div>
-                    <span class="txt-total">총금액: 9,000원</span>
-                </article>
-            <!-- </section> -->
+            <article class="cont-my-money">
+                <h2 class="txt-hide">소지금</h2>
+                <span class="txt-money my-money"> 소지금: <strong>25,000</strong> </span>
+            </article>
+            <article class="cont-get-item">
+                <h2 class="txt-hide">획득한 음료</h2>
+                <strong>획득한 음료</strong>
+                <div class="box-item get-item">
+                    <ul class="list-cart-item">
+                        <li class="list-item">
+                            <img src="assets/images/Original_Cola.png" alt="오리지널 빨간색 커버 캔콜라" class="img-list-beverage">
+                            <span class="txt-name">Original_Cola</span>
+                            <!-- 버튼같긴한데..일단 텍스트 처리 -->
+                            <span class="txt-amount">1</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="assets/images/Green_Cola.png" alt="초록색 커버 캔콜라" class="img-list-beverage">
+                            <span class="txt-name">Green_Cola</span>
+                            <span class="txt-amount">3</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="assets/images/Violet_Cola.png" alt="보라색 커버 캔콜라" class="img-list-beverage">
+                            <span class="txt-name">Violet_Cola</span>
+                            <span class="txt-amount">2</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="assets/images/Yellow_Cola.png" alt="노란색 커버 캔콜라" class="img-list-beverage">
+                            <span class="txt-name">Yellow_Cola</span>
+                            <span class="txt-amount">5</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="assets/images/Original_Cola.png" alt="오리지널 빨간색 커버 캔콜라" class="img-list-beverage">
+                            <span class="txt-name">Original_Cola</span>
+                            <span class="txt-amount">1</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="assets/images/Green_Cola.png" alt="초록색 커버 캔콜라" class="img-list-beverage">
+                            <span class="txt-name">Green_Cola</span>
+                            <span class="txt-amount">3</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="assets/images/Violet_Cola.png" alt="보라색 커버 캔콜라" class="img-list-beverage">
+                            <span class="txt-name">Violet_Cola</span>
+                            <span class="txt-amount">2</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="assets/images/Yellow_Cola.png" alt="노란색 커버 캔콜라" class="img-list-beverage">
+                            <span class="txt-name">Yellow_Cola</span>
+                            <span class="txt-amount">5</span>
+                        </li>
+                    </ul>
+                </div>
+                <span class="txt-total">총금액: 9,000원</span>
+            </article>
         </div>
         </div>
     </div>
